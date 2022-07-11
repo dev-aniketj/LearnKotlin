@@ -2,14 +2,17 @@ package basic_fund
 
 fun main() {
 
-//    INTEGER TYPES
-//    Byte(8-bit), Short(16-bit), Int(32-bit), Long(64-bit)
-    val myByte: Byte = 23 //-128 to 127
-    val myShort: Short = 25
-    val myInt: Int = 27
-    val myLong: Long = 24_234_342_653
+//    BOOLEAN , CHAR, STRING
 
-//    REAL
+    val flag: Boolean = false   // contains only (true, false)
+    val ch: Char = '`'
+    val firstName = "Aniket"
+    val lastName = "Jain"
 
-
+    println(flag)
+    println("Reverse of flag : ${!flag}")
+    println(ch)
+    println("Full Name : $firstName $lastName")
+    println("LastName first letter : ${lastName[0]}")
+    println("LastName last letter : ${lastName[lastName.length - 1]}")
 }
