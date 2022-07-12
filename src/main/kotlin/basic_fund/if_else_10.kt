@@ -1,9 +1,9 @@
 package basic_fund
 
 fun main() {
-    val a = 10
-    val b = 5
-    val c = 12
+    val a = readln().toInt()
+    val b = readln().toInt()
+    val c = readln().toInt()
 
     if (a > b && a > c) {
         println("a is greater")
@@ -12,4 +12,5 @@ fun main() {
     } else {
         println("c is greater")
     }
+
 }
