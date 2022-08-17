@@ -14,18 +14,21 @@ class TypeCasting {
         print("[")
         for (i in list) {
             if (i is Double) {
-                print("${floor(i)}, ")
+                print("${floor(i).toInt()}, ")  //type casting
             } else {
                 print("$i, ")
             }
         }
-        println("]")
+        println("\b\b]")
     }
 }
 
 fun main() {
     val a = TypeCasting()
-
     a.displayList(a.stringList)
     a.displayList(a.mixedList)
+
+    val str1: Any = "My name is aniket"
+    val str2: String? = str1 as? String     // using as? when we are not sure about it is String type or Not
+    println(str2)
 }
