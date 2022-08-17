@@ -19,6 +19,7 @@ fun main() {
 
 }
 
+// Primary Constructor
 class Student(firstName: String, lastName: String) {
     private var firstName: String? = null
     private var lastName: String? = null
@@ -43,7 +44,7 @@ class Student(firstName: String, lastName: String) {
         println("My age is $age and Hobby is $hobby.\n")
     }
 
-    // secondary constructor
+    // Secondary constructor
     constructor(firstName: String, lastName: String, age: Int, hobby: String)
             : this(firstName, lastName)     // calls the first constructor
     {
