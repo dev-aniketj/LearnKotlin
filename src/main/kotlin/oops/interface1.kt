@@ -1,6 +1,8 @@
 package oops
 
 interface Shape {
+    val area: Int
+
     fun area()    // abstract method
 
     fun display() {    // non-abstract method
@@ -8,12 +10,14 @@ interface Shape {
     }
 }
 
-class Rectangle(val l: Int, val w: Int) : Shape {
+class Rectangle(l: Int, w: Int) : Shape {
     private var length: Int = l
     private var width: Int = w
 
+    override val area: Int = length * width
+
     override fun area() {
-        println("Area of Rectangle is : ${length * width}")
+        println("Area of Rectangle is : $area")
     }
 
     override fun display() {
@@ -21,12 +25,16 @@ class Rectangle(val l: Int, val w: Int) : Shape {
     }
 }
 
-class Triangle(val b: Int, val h: Int) : Shape {
-    private var base = b
-    private var height = h
+class Triangle(private var base: Int, private var height: Int) : Shape {
+    override val area: Int
+        get() {
+            return (base * height * 0.5).toInt()
+        }
+
     override fun area() {
         println("Area of Triangle is : ${base * height * 0.5}")
     }
+
 }
 
 fun main() {
