@@ -2,9 +2,7 @@ package oops
 
 // Data Classes
 
-data class User(val id: Long, var name: String){
-
-}
+data class User(val id: Long, var name: String)
 
 fun main() {
     val user1 = User(1, "Aniket")
@@ -22,4 +20,6 @@ fun main() {
     val user4 = user1.copy()
     println(user1 == user4)     // true - because its value is similar
 
+    val (id, name) = user4  // unpackage data class member
+    println("id=$id, name=$name")
 }
