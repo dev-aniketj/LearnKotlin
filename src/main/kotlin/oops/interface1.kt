@@ -32,7 +32,7 @@ class Triangle(private var base: Int, private var height: Int) : Shape {
         }
 
     override fun area() {
-        println("Area of Triangle is : ${base * height * 0.5}")
+        println("Area of Triangle is : $area")
     }
 
 }
